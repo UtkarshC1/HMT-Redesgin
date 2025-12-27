@@ -1,4 +1,6 @@
-/* --- 1. SETUP & VARS --- */
+/* =========================================
+   1. SETUP & VARIABLES
+   ========================================= */
 :root {
     --glass-bg: rgba(20, 20, 20, 0.7);
     --glass-border: rgba(255, 255, 255, 0.12);
@@ -55,7 +57,9 @@ button {
     cursor: pointer;
 }
 
-/* --- UTILITIES --- */
+/* =========================================
+   2. UTILITIES & BACKGROUNDS
+   ========================================= */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -68,7 +72,7 @@ button {
     border: 0;
 }
 
-/* --- PRELOADER --- */
+/* Preloader */
 .preloader {
     position: fixed;
     top: 0;
@@ -124,7 +128,7 @@ button {
     }
 }
 
-/* --- TOAST --- */
+/* Toast Notification */
 #toast-container {
     position: fixed;
     bottom: 30px;
@@ -162,7 +166,7 @@ button {
     font-size: 1.2rem;
 }
 
-/* --- BACKGROUNDS --- */
+/* Backgrounds */
 .liquid-wrapper {
     position: fixed;
     top: 0;
@@ -251,7 +255,9 @@ button {
     }
 }
 
-/* --- NAV --- */
+/* =========================================
+   3. NAVIGATION
+   ========================================= */
 .glass-nav {
     position: fixed;
     top: 20px;
@@ -319,7 +325,9 @@ button {
     z-index: 1002;
 }
 
-/* --- SECTIONS (General) --- */
+/* =========================================
+   4. GENERAL LAYOUT & CARDS
+   ========================================= */
 .museum-section {
     min-height: 90vh;
     display: flex;
@@ -362,6 +370,85 @@ button {
     margin: 0 auto 40px auto;
 }
 
+/* =========================================
+   5. COMPONENTS (Buttons, Badges)
+   ========================================= */
+.museum-badge {
+    display: inline-block;
+    padding: 8px 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #bbb;
+}
+
+.gold-badge {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.btn-glass {
+    padding: 16px 40px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.8rem;
+}
+
+.btn-glass:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-glass.outline {
+    border-color: var(--neon-green);
+    color: var(--neon-green);
+}
+
+.btn-glass.outline:hover {
+    background: var(--neon-green);
+    color: #000;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+}
+
+.btn-glass.gold {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.btn-glass.gold:hover {
+    background: var(--gold);
+    color: #000;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+.btn-text {
+    background: transparent;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+/* =========================================
+   6. HERO SLIDER & HOME SECTIONS
+   ========================================= */
 .video-container {
     position: absolute;
     top: 0;
@@ -378,7 +465,6 @@ button {
     opacity: 0.2;
 }
 
-/* --- SLIDER --- */
 .slider-card-wrapper {
     position: relative;
     width: 100%;
@@ -501,7 +587,7 @@ button {
     transform: scale(1.4);
 }
 
-/* --- QUOTES & STATS --- */
+/* Quotes & Stats */
 .quote-box {
     margin-top: 30px;
     padding: 20px;
@@ -530,7 +616,6 @@ button {
     color: #888;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-style: normal;
     display: block;
 }
 
@@ -564,7 +649,7 @@ button {
     font-size: 0.8rem;
 }
 
-/* --- TIMELINE (Base) --- */
+/* Timeline */
 .timeline-section {
     padding: 80px 5%;
     max-width: 1000px;
@@ -627,81 +712,9 @@ button {
     margin-bottom: 10px;
 }
 
-/* --- COMMON UI --- */
-.museum-badge {
-    display: inline-block;
-    padding: 8px 18px;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 50px;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #bbb;
-}
-
-.gold-badge {
-    border-color: var(--gold);
-    color: var(--gold);
-}
-
-.btn-glass {
-    padding: 16px 40px;
-    border-radius: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.05);
-    color: #fff;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.3s;
-    display: inline-flex;
-    gap: 12px;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-size: 0.8rem;
-}
-
-.btn-glass:hover {
-    background: #fff;
-    color: #000;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.btn-glass.outline {
-    border-color: var(--neon-green);
-    color: var(--neon-green);
-}
-
-.btn-glass.outline:hover {
-    background: var(--neon-green);
-    color: #000;
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
-}
-
-.btn-glass.gold {
-    border-color: var(--gold);
-    color: var(--gold);
-}
-
-.btn-glass.gold:hover {
-    background: var(--gold);
-    color: #000;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-}
-
-.btn-text {
-    background: transparent;
-    border: none;
-    color: inherit;
-    font: inherit;
-    cursor: pointer;
-}
-
-/* --- SHOP / INVENTORY --- */
+/* =========================================
+   7. SHOP / INVENTORY PAGE
+   ========================================= */
 .shop-hero {
     padding: 140px 5% 40px 5%;
     text-align: center;
@@ -868,7 +881,10 @@ button {
     align-items: center;
 }
 
-/* --- LOGIN PAGE --- */
+/* =========================================
+   8. LOGIN & CONTACT PAGES
+   ========================================= */
+/* Login */
 .login-page main {
     display: flex;
     align-items: center;
@@ -929,6 +945,7 @@ button {
     margin-bottom: 15px;
 }
 
+/* Gear Animation */
 .gear-system {
     width: 60px;
     height: 60px;
@@ -959,6 +976,7 @@ button {
     }
 }
 
+/* Login Form */
 .login-form-wrapper {
     flex: 1;
     padding: 50px;
@@ -1053,7 +1071,7 @@ button {
     border-color: var(--gold);
 }
 
-/* --- CONTACT PAGE --- */
+/* Contact Page */
 .contact-card {
     display: flex;
     padding: 0;
@@ -1175,215 +1193,9 @@ button {
     flex: 1;
 }
 
-/* --- FOOTER --- */
-.glass-footer {
-    padding: 60px 5%;
-    border-top: 1px solid var(--glass-border);
-    background: #000;
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9rem;
-    color: #777;
-}
-
-.social-links {
-    margin-top: 15px;
-}
-
-.social-links a {
-    margin-right: 15px;
-    font-size: 1.2rem;
-}
-
-.social-links a:hover {
-    color: var(--gold);
-}
-
-/* =========================================================================
-   RESPONSIVE DESIGN SYSTEM (MOBILE & TABLET)
-   ========================================================================= */
-
-@media (max-width: 950px) {
-
-    /* Navigation: Switch to Full Screen Mobile Menu */
-    .glass-nav {
-        padding: 12px 20px;
-        width: 95%;
-    }
-
-    .nav-links {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: rgba(5, 5, 5, 0.98);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        flex-direction: column;
-        justify-content: center;
-        gap: 30px;
-        transform: translateY(-100%);
-        transition: 0.4s;
-        z-index: -1;
-        opacity: 0;
-        pointer-events: none;
-    }
-
-    .nav-links.active {
-        transform: translateY(0);
-        opacity: 1;
-        z-index: 999;
-        pointer-events: all;
-    }
-
-    .nav-links a {
-        font-size: 1.5rem;
-    }
-
-    .menu-trigger {
-        display: block;
-    }
-
-    /* Layout Adjustments */
-    .hide-mobile {
-        display: none;
-    }
-
-    .museum-section {
-        padding: 60px 5%;
-    }
-
-    .hero-title {
-        font-size: 2.8rem;
-    }
-
-    /* Split Cards (Login/Contact) become vertical */
-    .login-card,
-    .contact-card {
-        flex-direction: column;
-        height: auto;
-        min-height: auto;
-    }
-
-    .login-visual,
-    .login-form-wrapper,
-    .contact-info,
-    .contact-form-wrapper {
-        padding: 30px 20px;
-        border-right: none;
-    }
-
-    .contact-info {
-        border-bottom: 1px solid var(--glass-border);
-    }
-
-    .login-visual {
-        min-height: 250px;
-    }
-
-    .gear-system {
-        display: none;
-    }
-
-    /* Hide complex animations on mobile */
-
-    /* Footer */
-    .glass-footer {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-    }
-}
-
-@media (max-width: 768px) {
-
-    /* Timeline: Linearize the layout */
-    .timeline-line {
-        left: 20px;
-        transform: none;
-    }
-
-    .timeline-event {
-        width: 100%;
-        left: 0;
-        text-align: left;
-        padding: 20px 0 20px 50px;
-    }
-
-    .timeline-event.right {
-        left: 0;
-    }
-
-    .timeline-dot {
-        left: 14px;
-        right: auto !important;
-    }
-
-    /* Force dots to left */
-    .timeline-content {
-        padding: 20px;
-        width: 100%;
-    }
-
-    /* Shop Filters: Stack vertically */
-    .filter-bar {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px;
-    }
-
-    .filter-group {
-        justify-content: center;
-    }
-
-    .search-group {
-        width: 100%;
-    }
-
-    .search-group input {
-        width: 100%;
-    }
-
-    /* Hero Slider */
-    .slider-card-wrapper {
-        min-height: 500px;
-    }
-
-    .hero-slide {
-        flex-direction: column;
-    }
-
-    .slide-bg {
-        object-position: center;
-    }
-
-    /* Forms */
-    .form-row {
-        flex-direction: column;
-        gap: 0;
-    }
-
-    /* Stats */
-    .stats-section {
-        gap: 15px;
-    }
-
-    .stat-item {
-        padding: 20px;
-        min-width: 140px;
-    }
-
-    .stat-item h3 {
-        font-size: 2.5rem;
-    }
-}
-
 /* =========================================
-   CART SIDEBAR SYSTEM
+   9. CART SIDEBAR
    ========================================= */
-
-/* Dark Overlay Behind Sidebar */
 .cart-overlay {
     position: fixed;
     top: 0;
@@ -1403,7 +1215,6 @@ button {
     visibility: visible;
 }
 
-/* The Sidebar Itself */
 .cart-sidebar {
     position: fixed;
     top: 0;
@@ -1426,7 +1237,6 @@ button {
     transform: translateX(0);
 }
 
-/* Header */
 .cart-header {
     padding: 25px;
     border-bottom: 1px solid var(--glass-border);
@@ -1455,7 +1265,6 @@ button {
     color: var(--gold);
 }
 
-/* Items Area */
 .cart-items {
     flex: 1;
     overflow-y: auto;
@@ -1478,7 +1287,6 @@ button {
     opacity: 0.5;
 }
 
-/* Individual Item Card */
 .cart-item {
     display: flex;
     align-items: center;
@@ -1565,7 +1373,6 @@ button {
     color: #ff6b6b;
 }
 
-/* Footer / Checkout */
 .cart-footer {
     padding: 25px;
     border-top: 1px solid var(--glass-border);
@@ -1586,17 +1393,9 @@ button {
     font-family: var(--font-heading);
 }
 
-/* Mobile Responsiveness for Cart */
-@media (max-width: 480px) {
-    .cart-sidebar {
-        width: 100%;
-    }
-}
-
 /* =========================================
-   STORE LOCATOR STYLES
+   10. STORE LOCATOR
    ========================================= */
-
 .store-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -1707,13 +1506,241 @@ button {
     border: 1px solid #f39c12;
 }
 
-/* Mobile Adjustment for Stores */
+/* =========================================
+   11. FOOTER
+   ========================================= */
+.glass-footer {
+    padding: 60px 5%;
+    border-top: 1px solid var(--glass-border);
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.social-links a:hover {
+    color: var(--gold);
+}
+
+/* =========================================
+   12. MEDIA QUERIES (Mobile & Tablet)
+   ========================================= */
+@media (max-width: 950px) {
+
+    /* Mobile Nav */
+    .glass-nav {
+        padding: 12px 20px;
+        width: 95%;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(5, 5, 5, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        transform: translateY(-100%);
+        transition: 0.4s;
+        z-index: -1;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        z-index: 999;
+        pointer-events: all;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+    }
+
+    .menu-trigger {
+        display: block;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+
+    .museum-section {
+        padding: 60px 5%;
+    }
+
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    /* Stack Login/Contact/Footer */
+    .login-card,
+    .contact-card {
+        flex-direction: column;
+        height: auto;
+        min-height: auto;
+    }
+
+    .login-visual,
+    .login-form-wrapper,
+    .contact-info,
+    .contact-form-wrapper {
+        padding: 30px 20px;
+        border-right: none;
+    }
+
+    .contact-info {
+        border-bottom: 1px solid var(--glass-border);
+    }
+
+    .login-visual {
+        min-height: 250px;
+    }
+
+    .gear-system {
+        display: none;
+    }
+
+    .glass-footer {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+}
+
 @media (max-width: 768px) {
+
+    /* Timeline Fixes */
+    .timeline-line {
+        left: 20px;
+        transform: none;
+    }
+
+    .timeline-event {
+        width: 100%;
+        left: 0;
+        text-align: left;
+        padding: 20px 0 20px 50px;
+    }
+
+    .timeline-event.right {
+        left: 0;
+    }
+
+    .timeline-dot {
+        left: 14px;
+        right: auto !important;
+    }
+
+    .timeline-content {
+        padding: 20px;
+        width: 100%;
+    }
+
+    /* Shop Filters Mobile Fix (Horizontal Scroll) */
+    .filter-bar {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+        align-items: stretch;
+    }
+
+    .filter-group {
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 5px;
+        justify-content: flex-start;
+        gap: 10px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .filter-group::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filter-btn {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .search-group,
+    .search-group input {
+        width: 100%;
+    }
+
+    /* Inventory Grid Mobile Fix */
+    .shop-hero {
+        padding-top: 120px;
+        padding-bottom: 20px;
+    }
+
+    .artifact-grid {
+        grid-template-columns: 1fr;
+        /* Stack 1 column on mobile */
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    /* Store Locator Mobile */
     .store-grid {
         grid-template-columns: 1fr;
     }
 
     .store-card {
         margin-bottom: 20px;
+    }
+
+    /* Slider & Forms */
+    .slider-card-wrapper {
+        min-height: 500px;
+    }
+
+    .hero-slide {
+        flex-direction: column;
+    }
+
+    .slide-bg {
+        object-position: center;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .stats-section {
+        gap: 15px;
+    }
+
+    .stat-item {
+        padding: 20px;
+        min-width: 140px;
+    }
+
+    .stat-item h3 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-sidebar {
+        width: 100%;
     }
 }

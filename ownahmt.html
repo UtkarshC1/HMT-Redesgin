@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Acquire Legacy | HMT Archives</title>
+    <meta name="description"
+        content="Purchase restored vintage HMT watches. Explore our collection of Pilot, Janata, and Automatic mechanical timepieces.">
+    <meta name="theme-color" content="#050505">
+
+    <meta property="og:title" content="Acquire Legacy | HMT Archives">
+    <meta property="og:description" content="Genuine artifacts. Restored, regulated, and ready for duty.">
+    <meta property="og:image" content="assets/steallar.jpeg">
+    <meta property="og:type" content="product.group">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="shop-page loading">
+
+    <div class="preloader" aria-hidden="true">
+        <div class="loader-logo">ACQUIRE</div>
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <div id="toast-container" aria-live="polite"></div>
+
+    <div class="liquid-wrapper" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="glass-overlay"></div>
+        <div class="hex-grid"></div>
+    </div>
+
+    <header>
+        <nav class="glass-nav">
+            <a href="index.html" class="logo" aria-label="HMT Archives Home">
+                HMT <span class="archive-tag">ARCHIVES</span>
+            </a>
+
+            <button class="menu-trigger" onclick="toggleMenu()" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Museum</a></li>
+                <li><a href="index.html#vision">Legacy</a></li>
+                <li><a href="ownahmt.html" class="active" aria-current="page">Collection</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="cart-item">
+                    <button class="btn-text" onclick="openCart(event)" aria-label="Open Cart">
+                        Cart (<span id="cart-count">0</span>)
+                    </button>
+                </li>
+                <li><a href="login.html" class="btn-glass outline small-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="shop-hero" aria-labelledby="shop-heading">
+            <div class="content-layer">
+                <span class="museum-badge gold-badge">Official Inventory</span>
+                <h1 id="shop-heading" class="hero-title">The Vault</h1>
+                <p class="hero-subtitle">"Genuine artifacts. Restored, regulated, and ready for duty."</p>
+            </div>
+        </section>
+
+        <div class="filter-sticky-wrapper">
+            <div class="glass-panel filter-bar" role="toolbar" aria-label="Product Filters">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+                    <button class="filter-btn" data-filter="mechanical">Mechanical</button>
+                    <button class="filter-btn" data-filter="automatic">Automatic</button>
+                    <button class="filter-btn" data-filter="quartz">Quartz</button>
+                </div>
+
+                <div class="search-group">
+                    <label for="inventorySearch" class="visually-hidden"
+                        style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0);">Search
+                        Inventory</label>
+                    <i class="fa-solid fa-search" aria-hidden="true"></i>
+                    <input type="text" id="inventorySearch" placeholder="Search SKU..." onkeyup="filterSearch()">
+                </div>
+            </div>
+        </div>
+
+        <section class="museum-section" style="padding-top: 40px; min-height: 60vh;" aria-label="Product List">
+
+            <div class="artifact-grid" id="productGrid">
+
+                <article class="glass-card product-card" data-category="mechanical">
+                    <div class="badge-overlay">Best Seller</div>
+                    <div class="img-box">
+                        <img src="assets/HTM_Pilot.png" alt="HMT Pilot Black Dial Watch" loading="lazy">
+                    </div>
+                    <div class="info-box-vertical">
+                        <div class="meta">
+                            <span class="type">Mechanical</span>
+                            <h3>HMT Pilot</h3>
+                        </div>
+                        <p class="desc">The legendary aviator watch.</p>
+                        <div class="action-row">
+                            <span class="price">₹ 8,500</span>
+                            <button class="btn-glass outline sm" onclick="addToCart(event, 'HMT Pilot')"
+                                aria-label="Add HMT Pilot to Cart">
+                                Add <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="glass-card product-card" data-category="mechanical">
+                    <div class="img-box">
+                        <img src="assets/hmt_janata-front1.png" alt="HMT Janata White Dial Watch" loading="lazy">
+                    </div>
+                    <div class="info-box-vertical">
+                        <div class="meta">
+                            <span class="type">Mechanical</span>
+                            <h3>HMT Janata</h3>
+                        </div>
+                        <p class="desc">The first indigenous watch.</p>
+                        <div class="action-row">
+                            <span class="price">₹ 6,250</span>
+                            <button class="btn-glass outline sm" onclick="addToCart(event, 'HMT Janata')"
+                                aria-label="Add HMT Janata to Cart">
+                                Add <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="glass-card product-card" data-category="automatic">
+                    <div class="badge-overlay new">New</div>
+                    <div class="img-box">
+                        <img src="assets/steallar.jpeg" alt="HMT Stellar Open Heart Automatic Watch" loading="lazy">
+                    </div>
+                    <div class="info-box-vertical">
+                        <div class="meta">
+                            <span class="type">Automatic</span>
+                            <h3>Stellar Open Heart</h3>
+                        </div>
+                        <p class="desc">Modern automatic movement.</p>
+                        <div class="action-row">
+                            <span class="price">₹ 12,500</span>
+                            <button class="btn-glass outline sm" onclick="addToCart(event, 'Stellar')"
+                                aria-label="Add Stellar Open Heart to Cart">
+                                Add <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <div id="noResults" style="display: none; text-align: center; color: #888; padding: 40px;" role="status">
+                No artifacts found.
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="footer-col">
+            <h4>HMT Limited</h4>
+            <p>Auxiliary Business Division, Bengaluru</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="footer-col right">
+            <p><a href="tel:+918028385491" style="color: inherit; text-decoration: none;">+91-8028385491</a></p>
+            <p class="copyright">© 2025 HMT Heritage.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

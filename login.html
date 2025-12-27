@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Access Archives | HMT Museum</title>
+    <meta name="description" content="Authorized personnel login for HMT Heritage Archives.">
+    <meta name="theme-color" content="#050505">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="loading login-page">
+
+    <div class="preloader" aria-hidden="true">
+        <div class="loader-logo">ACCESS</div>
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <div id="toast-container" aria-live="polite"></div>
+
+    <div class="liquid-wrapper" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="glass-overlay"></div>
+    </div>
+
+    <header>
+        <nav class="glass-nav">
+            <a href="index.html" class="logo" aria-label="Return to Homepage">
+                HMT <span class="archive-tag">ARCHIVES</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="contact.html">Contact Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="login-section">
+            <div class="glass-card login-card">
+
+                <div class="login-visual">
+                    <div class="visual-content">
+                        <div class="gear-system" aria-hidden="true">
+                            <div class="gear-outer">
+                                <div class="gear-inner"></div>
+                            </div>
+                        </div>
+                        <h2>Authorized<br>Access Only</h2>
+                        <p>"Time waits for no one."</p>
+                    </div>
+                    <div class="visual-overlay"></div>
+                    <img src="assets/goldopenhearthmt.jpg"
+                        alt="Macro photography of watch movement" class="bg-movement">
+                </div>
+
+                <div class="login-form-wrapper">
+                    <div class="form-header">
+                        <h1>Identify Yourself</h1>
+                        <p class="sub-text">Enter credentials to unlock archives.</p>
+                    </div>
+
+                    <form id="loginForm" onsubmit="handleLogin(event)">
+                        <div class="input-group">
+                            <input type="email" id="email" required placeholder=" " autocomplete="email">
+                            <label for="email">Officer Email</label>
+                            <i class="fa-solid fa-envelope input-icon" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="password" id="password" required placeholder=" "
+                                autocomplete="current-password">
+                            <label for="password">Passcode</label>
+                            <i class="fa-solid fa-key input-icon" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="form-actions">
+                            <label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Keep signed in
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn-glass gold full-width" id="loginBtn">
+                            <span class="btn-text">Unlock Archives</span>
+                            <i class="fa-solid fa-lock-open"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

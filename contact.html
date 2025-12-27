@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Establish Link | HMT Archives</title>
+    <meta name="description" content="Contact HMT Limited Auxiliary Business Division. Reach out for queries regarding vintage watches, museum visits, and inventory.">
+    <meta name="theme-color" content="#050505">
+
+    <meta property="og:title" content="Contact HMT Archives">
+    <meta property="og:description" content="Reach out to the keepers of time.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="contact-page loading">
+
+    <div class="preloader" aria-hidden="true">
+        <div class="loader-logo">CONTACT</div>
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <div id="toast-container" aria-live="polite"></div>
+
+    <div class="liquid-wrapper" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="glass-overlay"></div>
+    </div>
+
+    <header>
+        <nav class="glass-nav">
+            <a href="index.html" class="logo" aria-label="HMT Archives Home">
+                HMT <span class="archive-tag">ARCHIVES</span>
+            </a>
+            
+            <button class="menu-trigger" onclick="toggleMenu()" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Museum</a></li>
+                <li><a href="ownahmt.html">Inventory</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+                <li class="cart-item">
+                    <button class="btn-text" onclick="openCart(event)" aria-label="Open Cart">
+                        Cart (<span id="cart-count">0</span>)
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="shop-hero" style="padding-bottom: 20px;">
+            <div class="content-layer">
+                <span class="museum-badge">Transmission</span>
+                <h1 class="hero-title">Establish Link</h1>
+                <p class="hero-subtitle">"Questions, archival requests, or museum inquiries. We are listening."</p>
+            </div>
+        </section>
+
+        <section class="museum-section" style="padding-top: 20px; align-items: flex-start;">
+            <div class="glass-card contact-card">
+                
+                <div class="contact-info">
+                    <div class="info-header">
+                        <h2>Headquarters</h2>
+                        <p>Auxiliary Business Division</p>
+                    </div>
+
+                    <address class="info-list">
+                        <div class="info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>
+                                HMT Limited, Jalahalli,<br>
+                                Bengaluru – 560013,<br>
+                                Karnataka, India
+                            </p>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <a href="tel:08028385491" class="contact-link">080-28385491</a>
+                                <span class="sub-note">(10 AM - 4 PM, Mon-Sat)</span>
+                                <span class="sub-note text-warning">Closed on Sundays & Holidays</span>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:info@hmtwatches.in" class="contact-link">info@hmtwatches.in</a>
+                        </div>
+                    </address>
+
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6874406209425!2d77.5368688148229!3d13.047402690806145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d1b7f7f0d01%3A0x6b1070242277490a!2sHMT%20Watch%20Showroom!5e0!3m2!1sen!2sin!4v1677834567890!5m2!1sen!2sin" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="HMT Limited Location">
+                        </iframe>
+                    </div>
+
+                    <div class="social-connect">
+                        <p>Follow Us On</p>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" onsubmit="handleContact(event)">
+                        <div class="input-group">
+                            <input type="text" id="c-name" required placeholder=" " autocomplete="name">
+                            <label for="c-name">Full Name</label>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="email" id="c-email" required placeholder=" " autocomplete="email">
+                            <label for="c-email">Email ID</label>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="input-group">
+                                <input type="tel" id="c-mobile" required placeholder=" " autocomplete="tel">
+                                <label for="c-mobile">Mobile No.</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="tel" id="c-tel" placeholder=" " autocomplete="tel-local">
+                                <label for="c-tel">Telephone No.</label>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <textarea id="c-comments" required placeholder=" " rows="4"></textarea>
+                            <label for="c-comments">Comments / Query</label>
+                        </div>
+
+                        <button type="submit" class="btn-glass gold full-width" id="contactBtn">
+                            <span class="btn-text">Transmit Query</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="footer-col">
+            <h4>HMT Limited</h4>
+            <p>Auxiliary Business Division, Bengaluru</p>
+        </div>
+        <div class="footer-col right">
+            <p><a href="tel:+918028385491">+91-8028385491</a></p>
+            <p class="copyright">© 2025 HMT Heritage.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

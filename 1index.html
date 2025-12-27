@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>HMT Museum | The Liquid Legacy</title>
+    <meta name="description"
+        content="HMT Archives - The Timekeeper of the Nation. Explore the legacy, history, and inventory of India's first watchmaker.">
+    <meta name="theme-color" content="#050505">
+
+    <meta property="og:title" content="HMT Museum | The Liquid Legacy">
+    <meta property="og:description" content="Explore the legacy of India's first watchmaker.">
+    <meta property="og:image" content="assets/hmt_janata-front1.png">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="loading">
+
+    <div class="preloader" aria-hidden="true">
+        <div class="loader-logo">HMT</div>
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <div id="toast-container" aria-live="polite"></div>
+
+    <div class="liquid-wrapper" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="glass-overlay"></div>
+        <div class="blueprint-grid" style="opacity: 0.15;"></div>
+    </div>
+
+    <header>
+        <nav class="glass-nav">
+            <a href="index.html" class="logo" aria-label="HMT Archives Homepage">
+                HMT <span class="archive-tag">ARCHIVES</span>
+            </a>
+
+            <button class="menu-trigger" onclick="toggleMenu()" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="#janata">Icons</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="ownahmt.html">Inventory</a></li>
+                <li class="cart-item">
+                    <button class="btn-text" onclick="openCart(event)" aria-label="Open Cart">
+                        Cart (<span id="cart-count">0</span>)
+                    </button>
+                </li>
+                <li><a href="login.html" class="btn-glass outline small-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="museum-section" id="hero-slider" aria-label="Featured Collections">
+            <div class="video-container hide-mobile">
+                <video autoplay muted loop playsinline poster="assets/HMT_MODERN_SONA.png">
+                    <source src="https://videos.pexels.com/video-files/8555651/8555651-uhd_2560_1440_25fps.mp4"
+                        type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <div class="video-grain"></div>
+            </div>
+
+            <div class="slider-card-wrapper">
+                <div class="slides-container">
+
+                    <article class="hero-slide active">
+                        <img src="assets/steallar.jpeg" class="slide-bg" alt="HMT Stellar Open Heart Watch"
+                            loading="eager">
+                        <div class="frosted-glass-overlay"></div>
+                        <div class="content-layer">
+                            <div class="badge-wrapper"><span class="museum-badge gold-badge">★ New Launch</span></div>
+                            <h2 class="hero-title">Stellar<br>Open Heart</h2>
+                            <p class="hero-subtitle">"The heartbeat of history, laid bare. Witness the automatic
+                                movement in action."</p>
+                            <div class="cta-wrapper">
+                                <button class="btn-glass gold" onclick="addToCart(event, 'Stellar Open Heart')">
+                                    Pre-Order <span class="price">₹ 12,500</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="hero-slide">
+                        <img src="assets/react.png" class="slide-bg" alt="HMT Janata Vintage Watch"
+                            style="object-position: center;" loading="lazy">
+                        <div class="frosted-glass-overlay"></div>
+                        <div class="content-layer">
+                            <div class="badge-wrapper"><span class="museum-badge">Announcement</span></div>
+                            <h2 class="hero-title">Museum<br>Re-Opening</h2>
+                            <p class="hero-subtitle">"Join us in Bangalore this weekend for the grand unveiling of the
+                                Heritage Wing."</p>
+                            <div class="cta-wrapper">
+                                <a href="ownahmt.html" class="btn-glass outline">Get Tickets <i
+                                        class="fa-solid fa-ticket"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="hero-slide">
+                        <img src="assets/Gemini_Generated_Image_gyw4engyw4engyw4.png" class="slide-bg"
+                            alt="HMT Sona Gold Watch" loading="lazy">
+                        <div class="frosted-glass-overlay"></div>
+                        <div class="content-layer">
+                            <div class="badge-wrapper"><span class="museum-badge">Collection</span></div>
+                            <h2 class="hero-title">The Gold<br>Series</h2>
+                            <p class="hero-subtitle">"Timeless elegance for the modern wrist. Explore the plated
+                                perfection."</p>
+                            <div class="cta-wrapper">
+                                <a href="#gold-era" class="btn-glass">Explore Sona <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="slider-controls">
+                <button class="arrow prev" onclick="changeSlide(-1)" aria-label="Previous Slide">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="dots-wrapper">
+                    <button class="dot active" onclick="goToSlide(0)" aria-label="Go to Slide 1"></button>
+                    <button class="dot" onclick="goToSlide(1)" aria-label="Go to Slide 2"></button>
+                    <button class="dot" onclick="goToSlide(2)" aria-label="Go to Slide 3"></button>
+                </div>
+                <button class="arrow next" onclick="changeSlide(1)" aria-label="Next Slide">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <section class="museum-section" id="vision" style="padding-bottom: 20px;">
+            <div class="glass-card hero-card about-hero">
+                <div class="badge-wrapper"><span class="museum-badge">Est. 1953 • Bengaluru</span></div>
+                <h2 class="hero-title">Built by the Nation,<br>For the Nation.</h2>
+                <p class="hero-subtitle">"We didn't just manufacture watches. We synchronized a country waking up to its
+                    own potential."</p>
+                <blockquote class="quote-box">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>It is not enough to be independent. We must be self-reliant.</p>
+                    <cite>- Jawaharlal Nehru, 1953</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <section class="stats-section" aria-label="Key Statistics">
+            <div class="stat-item glass-panel">
+                <h3 class="counter" data-target="100">0</h3>
+                <p>Million Watches Sold</p>
+            </div>
+            <div class="stat-item glass-panel">
+                <h3 class="counter" data-target="1961">0</h3>
+                <p>First Batch Released</p>
+            </div>
+            <div class="stat-item glass-panel">
+                <h3 class="counter" data-target="5">0</h3>
+                <p>Manufacturing Units</p>
+            </div>
+        </section>
+
+        <section class="timeline-section" id="timeline">
+            <div class="section-header">
+                <h2>The Chronology</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <article class="timeline-event" data-animate="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="year">1953</span>
+                        <h3>The Agreement</h3>
+                        <p>The Government of India signs a technical collaboration with <strong>Citizen Watch Co.,
+                                Japan</strong>. The dream of an Indian watchmaker is born.</p>
+                    </div>
+                </article>
+
+                <article class="timeline-event right" data-animate="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="year">1961</span>
+                        <h3>The Janata Era</h3>
+                        <p>Prime Minister Nehru releases the first batch of Hand Wound watches. The
+                            <strong>Janata</strong> becomes the unofficial uniform of the Indian civil servant.</p>
+                    </div>
+                </article>
+
+                <article class="timeline-event" data-animate="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="year">1975</span>
+                        <h3>Going Automatic</h3>
+                        <p>HMT introduces the <strong>Rajat</strong> and <strong>Kanchan</strong> automatic series
+                            (Day-Date), bringing luxury mechanics to the common man.</p>
+                    </div>
+                </article>
+
+                <article class="timeline-event right" data-animate="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="year">1985</span>
+                        <h3>Quartz Revolution</h3>
+                        <p>Adapting to the times, HMT launches quartz watches. The <strong>Sona</strong> continues to
+                            dominate as the premier wedding gift.</p>
+                    </div>
+                </article>
+
+                <article class="timeline-event" data-animate="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="year">2016</span>
+                        <h3>The Preservation</h3>
+                        <p>The factories wind down, but the legend lives on. The <strong>Heritage Wing</strong> opens to
+                            preserve the history for future generations.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="museum-section" style="min-height: 50vh;">
+            <div class="glass-panel text-panel"
+                style="text-align: center; align-items: center; max-width: 800px; margin: 0 auto;">
+                <h2>Own a Piece of History</h2>
+                <br>
+                <p class="narrative" style="max-width: 600px;">
+                    Our inventory is limited. These are not just timepieces; they are artifacts of a bygone era waiting
+                    for a new guardian.
+                </p>
+                <br>
+                <a href="ownahmt.html" class="btn-glass gold">View Full Inventory <i
+                        class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="glass-footer">
+        <div class="footer-col">
+            <h4>HMT Limited</h4>
+            <p>Auxiliary Business Division, Bengaluru</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="footer-col right">
+            <p><a href="tel:+918028385491" style="color: inherit; text-decoration: none;">+91-8028385491</a></p>
+            <p class="copyright">© 2025 HMT Heritage.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

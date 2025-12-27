@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Locate Us | HMT Archives</title>
+    <meta name="description" content="Find HMT Heritage Showrooms and Museum locations in Bangalore and across India.">
+    <meta name="theme-color" content="#050505">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="loading">
+
+    <div class="preloader" aria-hidden="true">
+        <div class="loader-logo">LOCATE</div>
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <div id="toast-container" aria-live="polite"></div>
+    <div class="liquid-wrapper" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-3"></div>
+        <div class="glass-overlay"></div>
+        <div class="blueprint-grid" style="opacity: 0.2;"></div>
+    </div>
+
+    <header>
+        <nav class="glass-nav">
+            <a href="index.html" class="logo" aria-label="HMT Archives Home">
+                HMT <span class="archive-tag">ARCHIVES</span>
+            </a>
+            
+            <button class="menu-trigger" onclick="toggleMenu()" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Museum</a></li>
+                <li><a href="ownahmt.html">Inventory</a></li>
+                <li><a href="stores.html" class="active" aria-current="page">Stores</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="cart-item">
+                    <button class="btn-text" onclick="openCart(event)" aria-label="Open Cart">
+                        Cart (<span id="cart-count">0</span>)
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="shop-hero">
+            <div class="content-layer">
+                <span class="museum-badge">Physical Presence</span>
+                <h1 class="hero-title">The Showrooms</h1>
+                <p class="hero-subtitle">"Step into the time capsule. Experience the heritage firsthand."</p>
+            </div>
+        </section>
+
+        <section class="museum-section" style="padding-top: 20px; align-items: flex-start;">
+            <div class="store-grid">
+
+                <article class="glass-card store-card" data-animate="fade-up">
+                    <div class="store-status open">Open Now</div>
+                    <div class="store-info">
+                        <h3>HMT Heritage Centre & Museum</h3>
+                        <p class="store-type">Flagship Museum & Sales</p>
+                        
+                        <div class="store-details">
+                            <div class="detail-row">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <address>
+                                    Jalahalli, Bengaluru,<br>
+                                    Karnataka 560013
+                                </address>
+                            </div>
+                            <div class="detail-row">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>10:00 AM - 5:30 PM (Tue Closed)</span>
+                            </div>
+                            <div class="detail-row">
+                                <i class="fa-solid fa-phone"></i>
+                                <a href="tel:08028381111">080-28381111</a>
+                            </div>
+                        </div>
+
+                        <div class="store-actions">
+                            <a href="https://goo.gl/maps/example" target="_blank" class="btn-glass gold full-width">
+                                <i class="fa-solid fa-diamond-turn-right"></i> Navigate
+                            </a>
+                        </div>
+                    </div>
+                    <div class="map-preview">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.671379893664!2d77.53589831482286!3d13.064519990794862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae22a613d96429%3A0x67584144490333d!2sHMT%20Watch%20Museum!5e0!3m2!1sen!2sin!4v1677654321098!5m2!1sen!2sin" 
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </article>
+
+                <article class="glass-card store-card" data-animate="fade-up">
+                    <div class="store-status closing-soon">Closing Soon</div>
+                    <div class="store-info">
+                        <h3>HMT Bhavan Showroom</h3>
+                        <p class="store-type">Corporate Sales Div.</p>
+                        
+                        <div class="store-details">
+                            <div class="detail-row">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <address>
+                                    Bellary Road, Mekhri Circle,<br>
+                                    Bengaluru 560032
+                                </address>
+                            </div>
+                            <div class="detail-row">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>10:00 AM - 6:00 PM (Mon-Sat)</span>
+                            </div>
+                            <div class="detail-row">
+                                <i class="fa-solid fa-phone"></i>
+                                <a href="tel:08023330333">080-23330333</a>
+                            </div>
+                        </div>
+
+                        <div class="store-actions">
+                            <a href="https://goo.gl/maps/example2" target="_blank" class="btn-glass outline full-width">
+                                <i class="fa-solid fa-diamond-turn-right"></i> Navigate
+                            </a>
+                        </div>
+                    </div>
+                    <div class="map-preview">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3567634825!2d77.5845!3d13.013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDAwJzQ2LjgiTiA3N8KwMzUnMDQuMiJF!5e0!3m2!1sen!2sin!4v1677654321098!5m2!1sen!2sin" 
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </article>
+
+                <article class="glass-card store-card" data-animate="fade-up">
+                    <div class="store-status closed">Closed</div>
+                    <div class="store-info">
+                        <h3>Barton Centre (ABD)</h3>
+                        <p class="store-type">City Center Outlet</p>
+                        
+                        <div class="store-details">
+                            <div class="detail-row">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <address>
+                                    MG Road, Bengaluru,<br>
+                                    Karnataka 560001
+                                </address>
+                            </div>
+                            <div class="detail-row">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>10:30 AM - 7:00 PM (Sun Closed)</span>
+                            </div>
+                            <div class="detail-row">
+                                <i class="fa-solid fa-phone"></i>
+                                <a href="tel:08025585555">080-25585555</a>
+                            </div>
+                        </div>
+
+                        <div class="store-actions">
+                            <a href="https://goo.gl/maps/example3" target="_blank" class="btn-glass outline full-width">
+                                <i class="fa-solid fa-diamond-turn-right"></i> Navigate
+                            </a>
+                        </div>
+                    </div>
+                    <div class="map-preview">
+                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.00!2d77.60!3d12.97!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzEyLjAiTiA3N8KwMzYnMDAuMCJF!5e0!3m2!1sen!2sin!4v1677654321098!5m2!1sen!2sin" 
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="footer-col">
+            <h4>HMT Limited</h4>
+            <p>Auxiliary Business Division, Bengaluru</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="footer-col right">
+            <p><a href="tel:+918028385491" style="color: inherit; text-decoration: none;">+91-8028385491</a></p>
+            <p class="copyright">© 2025 HMT Heritage.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
